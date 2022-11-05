@@ -450,10 +450,10 @@ label:valid {
   z-index: 2;
   background-color: rgba(100, 194, 158, 0.8);
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 .shop__block_item:hover {
   opacity: 1;
-  transition: all 0.5s ease;
 }
 .shop__item_logo {
   margin: 0 auto 14px;
