@@ -194,7 +194,7 @@ a {
 .work__container {
   display: grid;
   width: 100%;
-  grid: 600px 600px 600px/repeat(3, 1fr);
+  grid: repeat(3, 1fr)/repeat(3, 1fr);
   grid-template-areas: "block1 block1 block2" "block3 block4 block4" "block5 block6 block7";
 }
 .work__container_item {
@@ -263,9 +263,13 @@ a {
   display: block;
   margin: 9% auto 0;
 }
+.item__container {
+  height: 100%;
+}
 .item__container_text {
   position: relative;
   margin-bottom: -10px;
+  height: 427px;
 }
 .item__container_text::after {
   content: "";
@@ -657,7 +661,7 @@ input[name=email] {
 /*---media---*/
 @media (max-width: 1100px) {
   .work__container {
-    grid: repeat(4, 500px)/repeat(2, 1fr);
+    grid: repeat(4, 1fr)/repeat(2, 1fr);
     grid-template-areas: "block1 block1 " "block2 block7" "block4 block4" "block5 block6";
   }
   .work__container_item {
@@ -667,6 +671,9 @@ input[name=email] {
   .block3 {
     display: none;
   }
+  .item__container_text {
+    height: 310px;
+  }
   .item_wrapper {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -674,6 +681,7 @@ input[name=email] {
   .item_text {
     font-size: 12px;
     padding: 0 10px;
+    line-height: 20px;
   }
   .item_logo {
     margin-bottom: 15px;

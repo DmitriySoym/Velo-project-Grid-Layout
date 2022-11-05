@@ -5,7 +5,7 @@
   &__container {
     display: grid;
     width: 100%;
-    grid: 600px 600px 600px / repeat(3, 1fr);
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
     grid-template-areas:
       "block1 block1 block2"
       "block3 block4 block4"
@@ -15,38 +15,51 @@
     }
   }
 }
+
 .item_wrapper {
   padding-top: 70px;
   padding-bottom: 50px;
 }
+
+// .item__container {
+//   height: 100%;
+// }
+
 .block1 {
   background: url(../img/work/firstback.jpg) no-repeat center/cover;
   grid-area: block1;
   @extend %flexforitem;
 }
+
 .block2 {
   grid-area: block2;
 }
+
 .block3 {
   grid-area: block3;
 }
+
 .block4 {
   grid-area: block4;
   background: url(../img/work/six_back.jpg) no-repeat center/cover;
   @extend %flexforitem;
 }
+
 .block5 {
   grid-area: block5;
   background: url(../img/work/seven_back.jpg) no-repeat center/cover;
   @extend %flexforitem;
 }
+
 .block6 {
   grid-area: block6;
 }
+
 .block7 {
   grid-area: block7;
   background: url(../img/work/ten_back.jpg) no-repeat center/cover;
 }
+
 .item {
   &_logo {
     margin-bottom: 31px;
@@ -78,9 +91,13 @@
   }
 
   &__container {
+    height: 100%;
+
     &_text {
       position: relative;
       margin-bottom: -10px;
+      height: 427px;
+
       &::after {
         content: "";
         position: absolute;
