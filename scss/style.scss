@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /*---shablon---*/
 %titletext {
   line-height: 1.2;
@@ -24,6 +28,7 @@ body {
 a {
   text-decoration: none;
 }
+
 /*---general style ---*/
 .wrapper {
   overflow: hidden;

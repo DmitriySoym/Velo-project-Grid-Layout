@@ -5,6 +5,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*---shablon---*/
 .item_title, .aboutus__container_title {
   line-height: 1.2;
