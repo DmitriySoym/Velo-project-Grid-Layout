@@ -1,47 +1,74 @@
-.header_content {
-  width: 100%;
-  max-width: 1600px;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 1000;
-  background-color: #ecedf3;
-  margin: 0 auto;
-  transform: translateY(-36px);
-  height: 100px;
+li {
+  list-style: none;
 }
+
 .header {
+  &__content {
+    width: 100%;
+    max-width: 1600px;
+    background-color: #ecedf3;
+    margin: 0 auto;
+    transform: translateY(-36px);
+    height: 100px;
+  }
+
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  //   background-color: #ecedf3;
-
   margin: auto 0;
-  &__container {
-    margin: 35px auto 0;
-    width: 618px;
-    display: flex;
-    height: 85px;
-    justify-content: space-between;
-    align-items: center;
-    transform: translateY(11px);
 
-    &_item {
-      font-size: 13px;
-      line-height: 1.2;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #4d4959;
-      transition: all 0.5s ease;
-    }
+  &__menu--item {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
   }
 }
-.hoveritem:hover {
+
+nav > ul {
+  margin: 35px auto 0;
+  width: 618px;
+  display: grid;
+  grid: 1fr / repeat(5, 1fr);
+  grid-template-areas: "block1 block2 block3 block4 block5";
+  height: 85px;
+  transform: translateY(11px);
+}
+
+li > a {
+  color: #4d4959;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+li > a:hover {
   text-decoration: underline;
 }
+
+li:nth-child(1) {
+  grid-area: block1;
+}
+
+li:nth-child(2) {
+  grid-area: block2;
+}
+
+li:nth-child(3) {
+  grid-area: block3;
+}
+
+li:nth-child(4) {
+  grid-area: block4;
+}
+
+li:nth-child(5) {
+  grid-area: block5;
+}
+
 .burgermenu {
   width: 30px;
   padding: 10px 0;
@@ -90,17 +117,21 @@
     }
   }
 }
+
 .burgermenu.active .burgermenu_toggle {
   background: none;
 }
+
 .burgermenu.active .burgermenu_toggle::before {
   transform-origin: left top;
   transform: rotate(45deg) translateX(-3px);
 }
+
 .burgermenu.active .burgermenu_toggle::after {
   transform-origin: left bottom;
   transform: rotate(-45deg) translateX(-3px);
 }
+
 .logomobile {
   position: relative;
   display: none;

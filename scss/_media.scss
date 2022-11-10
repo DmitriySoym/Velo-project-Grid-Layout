@@ -128,39 +128,45 @@
     height: 70px;
     margin: 0;
     background-color: #ecedf3;
-
-    &__container {
-      position: absolute;
-      top: 60%;
-      width: 100%;
-      height: 140vw;
-      display: none;
-      flex-direction: column;
-      background-color: #ecedf3;
-      align-items: start;
-      padding-left: 5px;
-    }
-    &__logo {
-      display: none;
-    }
   }
-  .header__container.active {
+
+  li:nth-child(3) {
+    display: none;
+  }
+
+  nav > ul {
+    position: absolute;
+    top: 59%;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    background-color: #ecedf3;
+    align-items: start;
+    padding-left: 5px;
+  }
+
+  nav > ul.active {
     display: flex;
     justify-content: start;
     align-items: center;
   }
+
   .burgermenu {
     &_toggle {
       display: block;
     }
   }
-  .hoveritem {
+
+  .header__menu--item {
     transform: none;
     padding: 8px 20px;
   }
+
   .logomobile {
     display: block;
   }
+
   .logomibile_pictire {
     display: block;
     position: absolute;

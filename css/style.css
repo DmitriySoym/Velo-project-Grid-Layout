@@ -37,13 +37,8 @@ a {
 }
 
 /*----header---*/
-.header_content {
-  width: 100%;
-  max-width: 1600px;
-  background-color: #ecedf3;
-  margin: 0 auto;
-  transform: translateY(-36px);
-  height: 100px;
+li {
+  list-style: none;
 }
 
 .header {
@@ -54,27 +49,61 @@ a {
   z-index: 1000;
   margin: auto 0;
 }
-.header__container {
-  margin: 35px auto 0;
-  width: 618px;
-  display: flex;
-  height: 85px;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateY(11px);
+.header__content {
+  width: 100%;
+  max-width: 1600px;
+  background-color: #ecedf3;
+  margin: 0 auto;
+  transform: translateY(-36px);
+  height: 100px;
 }
-.header__container_item {
-  font-size: 13px;
-  line-height: 1.2;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #4d4959;
+.header__menu--item {
+  display: flex;
+  align-items: center;
   transition: all 0.5s ease;
 }
 
-.hoveritem:hover {
+nav > ul {
+  margin: 35px auto 0;
+  width: 618px;
+  display: grid;
+  grid: 1fr/repeat(5, 1fr);
+  grid-template-areas: "block1 block2 block3 block4 block5";
+  height: 85px;
+  transform: translateY(11px);
+}
+
+li > a {
+  color: #4d4959;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+li > a:hover {
   text-decoration: underline;
+}
+
+li:nth-child(1) {
+  grid-area: block1;
+}
+
+li:nth-child(2) {
+  grid-area: block2;
+}
+
+li:nth-child(3) {
+  grid-area: block3;
+}
+
+li:nth-child(4) {
+  grid-area: block4;
+}
+
+li:nth-child(5) {
+  grid-area: block5;
 }
 
 .burgermenu {
@@ -311,6 +340,7 @@ a {
   background-color: #f7f7f7;
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box;
 }
 .twitter_title {
   margin: 37px 0 27px 0;
@@ -753,21 +783,21 @@ input[name=email] {
     margin: 0;
     background-color: #ecedf3;
   }
-  .header__container {
+  li:nth-child(3) {
+    display: none;
+  }
+  nav > ul {
     position: absolute;
-    top: 60%;
+    top: 59%;
     width: 100%;
-    height: 140vw;
+    height: 100vh;
     display: none;
     flex-direction: column;
     background-color: #ecedf3;
     align-items: start;
     padding-left: 5px;
   }
-  .header__logo {
-    display: none;
-  }
-  .header__container.active {
+  nav > ul.active {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -775,7 +805,7 @@ input[name=email] {
   .burgermenu_toggle {
     display: block;
   }
-  .hoveritem {
+  .header__menu--item {
     transform: none;
     padding: 8px 20px;
   }

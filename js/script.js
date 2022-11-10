@@ -17,7 +17,7 @@ parent.addEventListener("click", (event) => {
 /*----menu burger------*/
 const menuBurgerActive = document.querySelector(".burgermenu");
 
-const naveActive = document.querySelector(".header__container");
+const naveActive = document.querySelector(".header__menu");
 
 menuBurgerActive.addEventListener("click", function () {
   menuBurgerActive.classList.toggle("active");
@@ -25,10 +25,7 @@ menuBurgerActive.addEventListener("click", function () {
 });
 
 naveActive.addEventListener("click", function (event) {
-  if (
-    event.target.closest(".header__container_item") &&
-    window.innerWidth < 768
-  ) {
+  if (event.target.closest(".header__menu--item") && window.innerWidth < 768) {
     menuBurgerActive.classList.remove("active");
     naveActive.classList.remove("active");
   }

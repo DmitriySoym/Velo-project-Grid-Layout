@@ -5,6 +5,7 @@
   background-color: #f7f7f7;
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box;
 
   &_title {
     margin: 37px 0 27px 0;
@@ -20,8 +21,6 @@
     font-weight: 400;
     font-style: italic;
     color: #848789;
-    //  max-width: 1036px;
-    //  width: 100%;
     margin: 0 auto;
   }
 
