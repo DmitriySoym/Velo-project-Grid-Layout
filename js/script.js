@@ -1,10 +1,8 @@
 /*--- active label----*/
 
-let parent = document.querySelector(".slide_navigation");
+let parent = document.querySelector(".slide__navigation");
 let labelItem = parent.querySelectorAll(".bar");
 parent.addEventListener("click", (event) => {
-  let target = event.target;
-
   if (event.target.classList.contains("bar")) {
     for (let i = 0; i < labelItem.length; i++) {
       labelItem[i].classList.remove("activelabel");

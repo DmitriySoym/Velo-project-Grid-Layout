@@ -12,13 +12,11 @@
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
-    &_text {
-    }
+  }
 
-    &_logos {
-      display: flex;
-      justify-content: center;
-    }
+  &__logos {
+    display: flex;
+    justify-content: center;
   }
 
   &__cr {
@@ -35,25 +33,25 @@
     }
   }
 }
+
 .footertext {
   font-size: 16px;
   line-height: 17px;
   font-weight: 700;
   color: #848789;
 }
+
 .footeradress {
   font-size: 13.9px;
   font-weight: 400;
   font-style: italic;
   line-height: 17px;
 }
-.footer-twitter {
-}
+
 .footer-facebook {
   margin: 0 15px;
 }
-.footer-mail {
-}
+
 .flexfoot {
   flex: 1 1 33.3333%;
 }

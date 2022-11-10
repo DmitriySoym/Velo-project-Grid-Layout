@@ -4,23 +4,23 @@
   margin: 0 auto;
   background-color: #f7f7f7;
   height: 469px;
+
+  &__title {
+    @extend %titletext;
+    margin: 35px auto;
+  }
+
+  &__text {
+    line-height: 34px;
+    font-weight: 400;
+    color: #848789;
+    width: 100%;
+    max-width: 1080px;
+    text-align: center;
+    margin: 0 auto;
+  }
   &__container {
     padding-top: 117px;
-
-    &_title {
-      @extend %titletext;
-      margin: 35px auto;
-    }
-
-    &_text {
-      line-height: 34px;
-      font-weight: 400;
-      color: #848789;
-      width: 100%;
-      max-width: 1080px;
-      text-align: center;
-      margin: 0 auto;
-    }
   }
 }
 .item_logo img {

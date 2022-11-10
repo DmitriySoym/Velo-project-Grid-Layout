@@ -9,7 +9,7 @@
     grid-template-rows: repeat(2, 1fr);
   }
 
-  &__block1 {
+  &__block {
     position: relative;
     width: 100%;
     & img {
@@ -18,39 +18,35 @@
     }
   }
 
-  &__block {
-    &_item {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      @extend %flexforitem;
-      flex-direction: column;
-      z-index: 2;
-      background-color: rgba(100, 194, 158, 0.8);
-      opacity: 0;
-      transition: all 0.5s ease-in-out;
-      &:hover {
-        opacity: 1;
-      }
+  &__item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    @extend %flexforitem;
+    flex-direction: column;
+    z-index: 2;
+    background-color: rgba(100, 194, 158, 0.8);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      opacity: 1;
     }
   }
 
-  &__item {
-    &_logo {
-      margin: 0 auto 14px;
-    }
+  &__logo {
+    margin: 0 auto 14px;
+  }
 
-    &_text {
-      font-size: 14px;
-      line-height: 1.2;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #ffffff;
-    }
+  &__text {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
   }
 }
 .shop1 {

@@ -10,7 +10,8 @@
       "block1 block1 block2"
       "block3 block4 block4"
       "block5 block6 block7";
-    &_item {
+
+    &__item {
       width: 100%;
     }
   }
@@ -20,10 +21,6 @@
   padding-top: 70px;
   padding-bottom: 50px;
 }
-
-// .item__container {
-//   height: 100%;
-// }
 
 .block1 {
   background: url(../img/work/firstback.jpg) no-repeat center/cover;

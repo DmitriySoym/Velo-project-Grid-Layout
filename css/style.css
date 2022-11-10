@@ -10,7 +10,7 @@ html {
 }
 
 /*---shablon---*/
-.item_title, .aboutus__container_title {
+.item_title, .aboutus__title {
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
@@ -19,7 +19,7 @@ html {
   text-align: center;
 }
 
-.mail-form__container, .shop__btn_item, .shop__btn_container, .shop__block_item, .block5, .block4, .block1 {
+.mail-form__container, .btn__item, .btn__container, .shop__item, .block5, .block4, .block1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,13 +191,10 @@ li:nth-child(5) {
   background-color: #f7f7f7;
   height: 469px;
 }
-.aboutus__container {
-  padding-top: 117px;
-}
-.aboutus__container_title {
+.aboutus__title {
   margin: 35px auto;
 }
-.aboutus__container_text {
+.aboutus__text {
   line-height: 34px;
   font-weight: 400;
   color: #848789;
@@ -205,6 +202,9 @@ li:nth-child(5) {
   max-width: 1080px;
   text-align: center;
   margin: 0 auto;
+}
+.aboutus__container {
+  padding-top: 117px;
 }
 
 .item_logo img {
@@ -226,7 +226,7 @@ li:nth-child(5) {
   grid: repeat(3, 1fr)/repeat(3, 1fr);
   grid-template-areas: "block1 block1 block2" "block3 block4 block4" "block5 block6 block7";
 }
-.work__container_item {
+.work__container__item {
   width: 100%;
 }
 
@@ -342,14 +342,14 @@ li:nth-child(5) {
   position: relative;
   box-sizing: border-box;
 }
-.twitter_title {
+.twitter__title {
   margin: 37px 0 27px 0;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #353738;
 }
-.twitter_text {
+.twitter__text {
   font-size: 24px;
   line-height: 34px;
   font-weight: 400;
@@ -370,14 +370,19 @@ li:nth-child(5) {
   color: #848789;
 }
 
-.slides_body {
+.slides__body {
   max-width: 1036px;
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
 }
+.slides__row {
+  width: 300%;
+  display: flex;
+  overflow: hidden;
+}
 
-.slide_navigation {
+.slide__navigation {
   position: absolute;
   bottom: 68px;
   left: 50%;
@@ -414,12 +419,6 @@ li:nth-child(5) {
 input[name=r] {
   position: absolute;
   visibility: hidden;
-}
-
-.slides {
-  width: 300%;
-  display: flex;
-  overflow: hidden;
 }
 
 label:active {
@@ -461,15 +460,15 @@ label:valid {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-.shop__block1 {
+.shop__block {
   position: relative;
   width: 100%;
 }
-.shop__block1 img {
+.shop__block img {
   width: 100%;
   height: 100%;
 }
-.shop__block_item {
+.shop__item {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -482,13 +481,13 @@ label:valid {
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
-.shop__block_item:hover {
+.shop__item:hover {
   opacity: 1;
 }
-.shop__item_logo {
+.shop__logo {
   margin: 0 auto 14px;
 }
-.shop__item_text {
+.shop__text {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
@@ -554,14 +553,14 @@ label:valid {
 }
 
 /*----shop_btn---*/
-.shop__btn_container {
+.btn__container {
   max-width: 1600px;
   width: 100%;
   height: 200px;
   margin: 0 auto;
   background-color: #282f35;
 }
-.shop__btn_item {
+.btn__item {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
@@ -573,7 +572,7 @@ label:valid {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0.49);
 }
-.shop__btn_item:hover {
+.btn__item:hover {
   transition: all 0.5s ease;
   background-color: rgba(255, 255, 255, 0.49);
   color: #282f35;
@@ -589,16 +588,16 @@ label:valid {
 .mail-form__container {
   flex-direction: column;
 }
-.mail-form__container_logo {
-  margin: 109px 0 39px;
-}
-.mail-form__container_text {
+.mail-form__text {
   font-size: 24px;
   line-height: 34px;
   font-weight: 400;
   font-style: italic;
   color: #848789;
   margin-bottom: 35px;
+}
+.mail-form__logo {
+  margin: 109px 0 39px;
 }
 
 input[name=email] {
@@ -648,7 +647,7 @@ input[name=email] {
   width: 100%;
   margin: 0 auto;
 }
-.footer__container_logos {
+.footer__logos {
   display: flex;
   justify-content: center;
 }
@@ -694,7 +693,7 @@ input[name=email] {
     grid: repeat(4, 1fr)/repeat(2, 1fr);
     grid-template-areas: "block1 block1 " "block2 block7" "block4 block4" "block5 block6";
   }
-  .work__container_item {
+  .work__container__item {
     width: 100%;
     height: 100%;
   }
@@ -757,17 +756,17 @@ input[name=email] {
   .twitter {
     padding: 0 5px;
   }
-  .twitter_title {
+  .twitter__title {
     font-size: 16px;
   }
-  .twitter_text {
+  .twitter__text {
     font-size: 12px;
   }
   /*----mail-form---*/
-  .mail-form__container_logo {
+  .mail-form__logo {
     margin: 109px 0 39px;
   }
-  .mail-form__container_text {
+  .mail-form__text {
     font-size: 16px;
   }
   /*---footer---*/
