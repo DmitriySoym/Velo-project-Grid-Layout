@@ -57,7 +57,7 @@ li {
   transform: translateY(-36px);
   height: 100px;
 }
-.header__menu--item {
+.header__menu-item {
   display: flex;
   align-items: center;
   transition: all 0.5s ease;
@@ -804,7 +804,7 @@ input[name=email] {
   .burgermenu_toggle {
     display: block;
   }
-  .header__menu--item {
+  .header__menu-item {
     transform: none;
     padding: 8px 20px;
   }
